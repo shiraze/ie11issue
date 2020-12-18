@@ -1,62 +1,24 @@
 {
-  "name": "OperatorClient",
+  "name": "operator-client",
   "homepage": ".",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@date-io/date-fns": "^1.3.13",
     "@material-ui/core": "^4.11.2",
-    "@material-ui/icons": "^4.11.2",
-    "@material-ui/lab": "^4.0.0-alpha.57",
-    "@material-ui/pickers": "^3.2.10",
-    "date-fns": "^2.16.1",
     "react": "^16.14.0",
     "react-app-polyfill": "^2.0.0",
-    "react-beforeunload": "^2.4.0",
     "react-dom": "^16.14.0",
     "react-redux": "^7.2.2",
     "react-scripts": "4.0.1",
-    "react-sortable-tree": "^2.8.0",
-    "react-virtualized": "^9.22.2",
-    "react-webcam": "^5.2.2",
     "redux": "^4.0.5",
-    "redux-form": "^8.3.7",
     "redux-thunk": "^2.3.0"
   },
   "proxy": "http://localhost:6000/",
   "scripts": {
-    "analyze": "source-map-explorer build/static/js/*.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "cover": "react-scripts test --coverage --watchAll",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public --quiet",
-    "lint": "eslint --ext .js,.jsx src || echo Lint complete",
-    "lint-jenkins": "eslint --ext .js,.jsx src -f checkstyle -o react.xml|| echo Lint complete"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "plugin:jsx-a11y/recommended"
-    ],
-    "env": {
-      "browser": true
-    },
-    "rules": {
-      "no-shadow": "error",
-      "import/no-anonymous-default-export": [
-        "error",
-        {
-          "allowArrowFunction": true,
-          "allowObject": true
-        }
-      ]
-    },
-    "plugins": [
-      "jsx-a11y"
-    ]
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
@@ -72,39 +34,6 @@
       "last 1 firefox version",
       "last 1 safari version",
       "ie 11"
-    ]
-  },
-  "devDependencies": {
-    "@storybook/addon-essentials": "^6.1.11",
-    "@storybook/preset-create-react-app": "^3.1.5",
-    "@storybook/react": "^6.1.11",
-    "@types/enzyme": "^3.10.8",
-    "@types/jest": "^26.0.19",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.5",
-    "fetch-mock": "^9.11.0",
-    "jest-cucumber": "^3.0.0",
-    "jest-websocket-mock": "^2.2.0",
-    "mock-socket": "^9.0.3",
-    "node-fetch": "^2.6.1",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-mock-store": "^1.5.4",
-    "source-map-explorer": "^2.5.1",
-    "typescript": "^4.1.3"
-  },
-  "jest": {
-    "resetMocks": false,
-    "coverageReporters": [
-      "text",
-      "text-summary",
-      "html",
-      "cobertura"
-    ],
-    "transformIgnorePatterns": [
-      "node_modules/(?!(react-dnd|frontend-collective-react-dnd-scrollzone|react-sortable-tree|dnd-core|react-dnd-html5-backend|@intercede/aware-fingerprint)/)"
-    ],
-    "coveragePathIgnorePatterns": [
-      "src/utils/aware"
     ]
   }
 }

@@ -1,5 +1,4 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
 
 import mainPageReducer from "./mainPage/reducer";
 
@@ -17,8 +16,6 @@ const rootReducer = (state, action) => {
   return appReducer(state, action);
 };
 
-const store = window.devToolsExtension
-  ? createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
-  : createStore(rootReducer, applyMiddleware(thunk));
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;

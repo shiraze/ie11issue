@@ -3,7 +3,6 @@ import { Component } from "react";
 import MainAppBar from "../mainAppBar";
 import MainPage from "../mainPage";
 
-import PropTypes from "prop-types";
 
 export default class MainApplication extends Component {
   isIE = /*@cc_on!@*/ false || !!document.documentMode;
@@ -21,10 +20,3 @@ export default class MainApplication extends Component {
     );
   }
 }
-
-MainApplication.propTypes = {
-  needToLogon: PropTypes.bool.isRequired,
-  activeForm: PropTypes.object,
-  permissions: PropTypes.object.isRequired,
-  connectionError: PropTypes.string,
-};
