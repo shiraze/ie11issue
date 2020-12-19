@@ -1,3 +1,1 @@
-import MainApplication from "./mainApplication";
-
-export default MainApplication;
+export {default} from "./mainApplication";
